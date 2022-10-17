@@ -1,14 +1,13 @@
-package car.copernic.pcanton.pruebafirebase
+package car.copernic.pcanton.pruebafirebase.SignIn
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
+import car.copernic.pcanton.pruebafirebase.MainActivity
+import car.copernic.pcanton.pruebafirebase.Recycle.RecycleviewActivity
+import car.copernic.pcanton.pruebafirebase.SignUp.SignUpctivity
 import car.copernic.pcanton.pruebafirebase.databinding.SigninActivityBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -27,14 +26,15 @@ class signinActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         binding.signInAppCompatButton.setOnClickListener{ signInAppCompatButtonOnClick() }
-        binding.signUpTextView.setOnClickListener { signUpTextViewOnClick() }
+        binding.cuentaTextView.setOnClickListener{ volver() }
 
     }
 
-    private fun signUpTextViewOnClick() {
+    private fun volver() {
         val intent = Intent(this, SignUpctivity::class.java)
         this.startActivity(intent)
     }
+
 
     private fun signInAppCompatButtonOnClick() {
         val email=binding.emailEditText2.text.toString()
@@ -76,7 +76,7 @@ class signinActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         if(currentUser != null){
             if(currentUser.isEmailVerified){
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, RecycleviewActivity::class.java)
                 this.startActivity(intent)
             }
         }

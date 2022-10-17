@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="car.copernic.pcanton.pruebafirebase.Recycle.RecycleviewActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="289dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
