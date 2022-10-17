@@ -25,9 +25,17 @@ class signinActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = Firebase.auth
 
-        binding.signInAppCompatButton.setOnClickListener{ signInAppCompatButtonOnClick() }
-        binding.cuentaTextView.setOnClickListener{ volver() }
+        binding.signInAppCompatButton.setOnClickListener{ onclicBoton() }
+        binding.cuentaTextView.setOnClickListener{ onclictextview() }
 
+    }
+
+    private fun onclicBoton() {
+        signInAppCompatButtonOnClick()
+    }
+
+    private fun onclictextview() {
+        volver()
     }
 
     private fun volver() {

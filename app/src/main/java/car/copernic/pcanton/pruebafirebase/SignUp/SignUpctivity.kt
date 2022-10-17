@@ -60,7 +60,7 @@ class SignUpctivity : AppCompatActivity() {
             Toast.makeText(this, "Confirma la contraseña.",
                 Toast.LENGTH_SHORT).show()
         } else {
-            createAccount(mEmail.toString(), mPassword.toString())
+            createAccount(mEmail, mPassword)
         }
     }
     private fun volver() {
