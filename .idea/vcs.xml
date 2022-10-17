@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/firebase3" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pruebafirebase" vcs="Git" />
   </component>
 </project>
