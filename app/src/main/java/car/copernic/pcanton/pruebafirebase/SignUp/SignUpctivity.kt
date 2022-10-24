@@ -32,7 +32,7 @@ class SignUpctivity : AppCompatActivity() {
         val getImage=registerForActivityResult(
             ActivityResultContracts.GetContent(),
             ActivityResultCallback {
-                pickimage.setImageURI(it)
+                binding.pickimage.setImageURI(it)
             }
         )
         auth = Firebase.auth
@@ -41,7 +41,7 @@ class SignUpctivity : AppCompatActivity() {
 
 
 
-        pickimage.setOnClickListener {
+        binding.pickimage.setOnClickListener {
             getImage.launch("image/")
         }
     }
