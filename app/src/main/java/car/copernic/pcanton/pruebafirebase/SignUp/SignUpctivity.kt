@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.ViewModelProvider
 import car.copernic.pcanton.pruebafirebase.SignIn.signinActivity
 import car.copernic.pcanton.pruebafirebase.databinding.ActivitySignUpctivityBinding
@@ -19,21 +21,32 @@ class SignUpctivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private val db = FirebaseFirestore.getInstance()
     private lateinit var binding: ActivitySignUpctivityBinding
+    //private lateinit var viewModel: SignUpViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivitySignUpctivityBinding.inflate(layoutInflater)
-
+       // viewModel=ViewModelProvider(this).get(SignUpViewModel::class.java)
         setContentView(binding.root)
+
+        val getImage=registerForActivityResult(
+            ActivityResultContracts.GetContent(),
+            ActivityResultCallback {
+                pickimage.setImageURI(it)
+            }
+        )
         auth = Firebase.auth
-        binding.signUpButton2.setOnClickListener { signUpButtonOnClick() }
+        binding.signUpButton2.setOnClickListener { signUpButton2OnClick() }
         binding.backImageView.setOnClickListener{ backImageViewOnClick() }
 
 
+
+        pickimage.setOnClickListener {
+            getImage.launch("image/")
+        }
     }
 
-    //OnClick
-    private fun signUpButtonOnClick() {
+    private fun signUpButton2OnClick() {
         iniciarSession()
     }
     private fun backImageViewOnClick() {
@@ -46,10 +59,9 @@ class SignUpctivity : AppCompatActivity() {
         val mPassword = binding.passwordEditText2.text.toString()
         val mRepeatPassword = binding.repeatPasswordEditText.text.toString()
 
-        val passwordRegex = Pattern.compile(
-            "(?=.*[a-z A-z 0-9])" +
-                    ".{8,}" +
-                    "$")
+        val passwordRegex = Pattern.compile("(?=.*[a-z A-Z 0-9]).{8,}$")
+
+
         if(mEmail.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(mEmail).matches()) {
             Toast.makeText(this, "Ingrese un email valido.",
                 Toast.LENGTH_SHORT).show()
@@ -91,11 +103,5 @@ class SignUpctivity : AppCompatActivity() {
                 "telefono" to telefono,
                 "correo" to mEmail))
     }
-
-
-
-
-
-
 
 }

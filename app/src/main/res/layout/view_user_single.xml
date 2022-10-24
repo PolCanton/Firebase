@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    app:cardBackgroundColor="#EAE7E7"
+    app:cardBackgroundColor="#1F808080"
     app:cardCornerRadius="20dp">
 
     <LinearLayout
@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Correo"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -35,6 +36,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="Direccion"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
 
                 <TextView
@@ -42,6 +44,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="Telefono"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
 
             </LinearLayout>
