@@ -33,6 +33,7 @@ class SignUpctivity : AppCompatActivity() {
             ActivityResultContracts.GetContent(),
             ActivityResultCallback {
                 binding.pickimage.setImageURI(it)
+
             }
         )
         auth = Firebase.auth
@@ -43,6 +44,7 @@ class SignUpctivity : AppCompatActivity() {
 
         binding.pickimage.setOnClickListener {
             getImage.launch("image/")
+
         }
     }
 
