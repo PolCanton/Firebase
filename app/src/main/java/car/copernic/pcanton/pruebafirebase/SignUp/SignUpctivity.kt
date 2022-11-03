@@ -59,8 +59,8 @@ class SignUpctivity : AppCompatActivity() {
     }
 
     fun iniciarSession() {
-        val mEmail = binding.emailEditText2.text.toString()
 
+        val mEmail = binding.emailEditText2.text.toString()
         val mPassword = binding.passwordEditText2.text.toString()
         val mRepeatPassword = binding.repeatPasswordEditText.text.toString()
 
@@ -87,7 +87,7 @@ class SignUpctivity : AppCompatActivity() {
     }
 
     private fun createAccount(email: String, password: String) {
-        var auth= Firebase.auth
+         auth= Firebase.auth
 
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
