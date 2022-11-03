@@ -8,6 +8,7 @@ import android.widget.Toast
 import car.copernic.pcanton.pruebafirebase.MainActivity
 import car.copernic.pcanton.pruebafirebase.Recycle.RecycleviewActivity
 import car.copernic.pcanton.pruebafirebase.SignUp.SignUpctivity
+import car.copernic.pcanton.pruebafirebase.SubirImagen.SubirImagen
 import car.copernic.pcanton.pruebafirebase.databinding.SigninActivityBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -64,7 +65,7 @@ class signinActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Log.d("TAG", "signInWithEmail:success")
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, SubirImagen::class.java)
                     this.startActivity(intent)
                 } else {
                     Log.w("TAG", "signInWithEmail:failure", task.exception)

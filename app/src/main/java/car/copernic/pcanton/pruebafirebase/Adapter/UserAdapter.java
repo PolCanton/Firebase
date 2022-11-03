@@ -5,13 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-
 import car.copernic.pcanton.pruebafirebase.R;
 import car.copernic.pcanton.pruebafirebase.model.User;
 
@@ -28,7 +25,6 @@ public class UserAdapter extends FirestoreRecyclerAdapter<User, UserAdapter.View
         holder.direccion.setText(model.getDireccion());
         holder.telefono.setText(model.getTelefono());
     }
-
 
     @NonNull
     @Override

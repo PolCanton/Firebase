@@ -14,9 +14,11 @@
         android:theme="@style/Theme.PruebaFIrebase"
         tools:targetApi="31">
         <activity
+            android:name=".SubirImagen.SubirImagen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".SignUp.SignUpctivity"
             android:exported="false" />

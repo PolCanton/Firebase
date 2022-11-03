@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "6981285620",
-    "project_id": "pruebafirebase-d29fe",
-    "storage_bucket": "pruebafirebase-d29fe.appspot.com"
+    "project_number": "946546531173",
+    "project_id": "fir-1-9b627",
+    "storage_bucket": "fir-1-9b627.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:6981285620:android:941a6e8d282a45929590a1",
+        "mobilesdk_app_id": "1:946546531173:android:92141820c0145591f05f8c",
         "android_client_info": {
           "package_name": "car.copernic.pcanton.pruebafirebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "6981285620-blpiqc66l3k7l3dpcn72r9530eql20ha.apps.googleusercontent.com",
+          "client_id": "946546531173-f3cklbkkt0ef5bgleh483utmevd67rfk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAiARc8ZL1nIuvq-LnF3PTx5iOaIeptrbY"
+          "current_key": "AIzaSyBoiRG5zvXIZWfcFs71OPQj_KzEfDYcmFs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "6981285620-blpiqc66l3k7l3dpcn72r9530eql20ha.apps.googleusercontent.com",
+              "client_id": "946546531173-f3cklbkkt0ef5bgleh483utmevd67rfk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

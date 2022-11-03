@@ -52,7 +52,7 @@
 
         <EditText
             android:id="@+id/emailEditText2"
-            android:text="pcanton19@gmail.com"
+            android:text="pcanton@gmail.com"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -70,7 +70,6 @@
 
         <EditText
             android:id="@+id/passwordEditText2"
-            android:text="123456#"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -84,9 +83,9 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="16dp"
-            android:textColorHint="@color/black"
+            android:text="123456ab"
             android:textColor="@color/black"
-            />
+            android:textColorHint="@color/black" />
 
         <TextView
             android:id="@+id/recoveryAccountTextView"
